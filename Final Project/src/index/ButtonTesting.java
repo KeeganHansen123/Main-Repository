@@ -9,7 +9,7 @@ public class ButtonTesting extends JFrame {
 
 		private final int SIZE = 180;
 		private Container con = getContentPane();
-		private JButton button = new JButton("Press Me");
+		private JButton button = new JButton("Play");
 		public ButtonTesting()
 		{
 			setSize(SIZE, SIZE);
