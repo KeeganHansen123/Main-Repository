@@ -15,8 +15,8 @@ public class ButtonTesting extends JFrame {
 			setSize(SIZE, SIZE);
 			con.setLayout(new FlowLayout());
 			con.add(button);
-			con.setBackground(Color.YELLOW);
-			button.setBackground(Color.RED);
+			con.setBackground(Color.BLACK);
+			button.setBackground(Color.BLUE);
 			button.setForeground(Color.WHITE);
 		}
 		public static void main(String[] args)
