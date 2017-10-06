@@ -3,6 +3,7 @@ package index;
 import java.applet.Applet;
 import java.applet.AudioClip;
 import java.net.URL;
+import javax.swing.JOptionPane;
 
 	public class Sound {
 
@@ -17,6 +18,7 @@ import java.net.URL;
 			Thread.sleep(20000);
 			clip2.stop();
 			
+			JOptionPane.showMessageDialog(null, "End");
 		}
 		
 }
