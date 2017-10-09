@@ -2,7 +2,6 @@ package FinalApplication;
 
 import javax.swing.*;
 import javax.swing.JOptionPane;
-
 import java.awt.*;
 import java.awt.event.*;
 
@@ -20,7 +19,7 @@ public class Menu extends JFrame {
 		private Container con2 = getContentPane();
 		private JButton button2 = new JButton("Quit");
 		
-		public Menu()
+		public void Menu()
 		{
 			setSize(SIZE, SIZE);
 			con.setLayout(new FlowLayout());
