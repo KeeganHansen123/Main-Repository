@@ -12,7 +12,7 @@ public class Game {
 	}
 		public static void gameStart() {
 			
-		JOptionPane.showMessageDialog(null,  "You did it");
+		
 	}
 
 }
