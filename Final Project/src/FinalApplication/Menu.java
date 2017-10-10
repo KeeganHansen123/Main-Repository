@@ -15,11 +15,11 @@ public class Menu extends JFrame {
 		private Container con1 = getContentPane();
 		private JButton button1 = new JButton("22 Questions");
 		
-		private final int SIZE2 = 350;
+		private final int SIZE2 = 180;
 		private Container con2 = getContentPane();
 		private JButton button2 = new JButton("Quit");
 		
-		public void Menu()
+		public Menu()
 		{
 			setSize(SIZE, SIZE);
 			con.setLayout(new FlowLayout());
