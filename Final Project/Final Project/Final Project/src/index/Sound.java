@@ -9,7 +9,7 @@ import javax.swing.JOptionPane;
 
 		public static void main(String[] args) throws Exception 
 		{
-			URL url = Sound.class.getResource("");
+			URL url = new URL("http://www.wavsource.com/snds_2017-09-17_1751672946049674/sfx/boo.wav");
 			AudioClip clip = Applet.newAudioClip(url);
 			AudioClip clip2 = Applet.newAudioClip(url);
 			clip.play();
