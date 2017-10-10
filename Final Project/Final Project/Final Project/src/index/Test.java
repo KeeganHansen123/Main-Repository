@@ -9,7 +9,7 @@ class Test extends JFrame implements ActionListener
 {
   String home = System.getProperty("user.home");
   JButton btn = new JButton("Play Sound");
-  File wavFile = new File(home + "/Downloads/worlds-smallest-violin.mp3");
+  File wavFile = new File(home + "/Downloads/boo.wav");
   AudioClip sound;
   @SuppressWarnings("deprecation")
 public Test()
