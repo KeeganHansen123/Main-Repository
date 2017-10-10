@@ -7,7 +7,6 @@ import java.awt.event.*;
 
 public class BaseQuestion extends JFrame{
 	
-	
 	private final int SIZE = 180;
 	private Container con = getContentPane();
 	private JButton button = new JButton("Answer0");
@@ -24,8 +23,18 @@ public class BaseQuestion extends JFrame{
 	private Container con3 = getContentPane();
 	private JButton button3 = new JButton("Answer3");
 
+	JFrame frame = new JFrame();
+	JPanel panel= new JPanel();
+	JLabel label= new JLabel();
 	public BaseQuestion()
 	{
+		label.setText("Question............................");
+		panel.add(label);
+		frame.add(panel);
+		frame.pack();
+		frame.setLocationRelativeTo(null);
+		frame.setVisible(true);
+		
 		setSize(SIZE, SIZE);
 		con.setLayout(new FlowLayout());
 		con.add(button);
