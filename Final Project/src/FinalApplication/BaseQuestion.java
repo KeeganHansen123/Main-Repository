@@ -47,6 +47,7 @@ public class BaseQuestion extends JFrame{
 		button.addActionListener(a -> QuestionTwo.main(null));
 		button.addActionListener(a -> dispose());
 		
+		
 		setSize(SIZE1, SIZE1);
 		con1.setLayout(new FlowLayout());
 		con1.add(button1);
