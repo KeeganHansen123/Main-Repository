@@ -5,30 +5,29 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class BaseQuestion extends JFrame{
-	
+public class QuestionTwo extends JFrame{
 	private final int SIZE = 180;
 	private Container con = getContentPane();
-	private JButton button = new JButton("A Myriaannum");
+	private JButton button = new JButton("Rabbits");
 	
 	private final int SIZE1 = 180;
 	private Container con1 = getContentPane();
-	private JButton button1 = new JButton("A Decade");
+	private JButton button1 = new JButton("Clowns");
 	
 	private final int SIZE2 = 180;
 	private Container con2 = getContentPane();
-	private JButton button2 = new JButton("A Millenium");
+	private JButton button2 = new JButton("Pirates");
 	
 	private final int SIZE3 = 180;
 	private Container con3 = getContentPane();
-	private JButton button3 = new JButton("A Century");
+	private JButton button3 = new JButton("Mascots");
 
 	JFrame frame = new JFrame();
 	JPanel panel= new JPanel();
 	JLabel label= new JLabel();
-	public BaseQuestion()
+	public QuestionTwo()
 	{
-		label.setText("What is the word used to describe an indefinitely large number?");
+		label.setText("What is Johnny Depp afraid of?");
 		panel.add(label);
 		frame.add(panel);
 		frame.pack();
@@ -43,9 +42,7 @@ public class BaseQuestion extends JFrame{
 		button.setForeground(Color.WHITE);
 		button.setMnemonic(KeyEvent.VK_A);
 		button.setActionCommand("0");
-		button.addActionListener(a -> JOptionPane.showMessageDialog(null, "Correct!"));
-		button.addActionListener(a -> QuestionTwo.main(null));
-		button.addActionListener(a -> dispose());
+		button.addActionListener(a -> JOptionPane.showMessageDialog(null, "Wrong Answer"));
 		
 		setSize(SIZE1, SIZE1);
 		con1.setLayout(new FlowLayout());
@@ -55,7 +52,8 @@ public class BaseQuestion extends JFrame{
 		button1.setForeground(Color.WHITE);
 		button1.setMnemonic(KeyEvent.VK_B);
 		button1.setActionCommand("1");
-		button1.addActionListener(b -> JOptionPane.showMessageDialog(null, "Wrong Answer"));
+		button1.addActionListener(b -> JOptionPane.showMessageDialog(null, "Correct!"));
+		button1.addActionListener(a -> QuestionThree.main(null));
 		
 		setSize(SIZE2, SIZE2);
 		con2.setLayout(new FlowLayout());
@@ -79,10 +77,7 @@ public class BaseQuestion extends JFrame{
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		BaseQuestion frame = new BaseQuestion();
+		QuestionTwo frame = new QuestionTwo();
 		frame.setVisible(true);
-		
 	}
-	
-	
 }
