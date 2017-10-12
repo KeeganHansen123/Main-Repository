@@ -5,29 +5,29 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class QuestionSeven extends JFrame{
+public class QuestionEight extends JFrame{
 	private final int SIZE = 180;
 	private Container con = getContentPane();
-	private JButton button = new JButton("Mercury");
+	private JButton button = new JButton("Treat Captured Criminals");
 	
 	private final int SIZE1 = 180;
 	private Container con1 = getContentPane();
-	private JButton button1 = new JButton("Neptune");
+	private JButton button1 = new JButton("Use a Taser");
 	
 	private final int SIZE2 = 180;
 	private Container con2 = getContentPane();
-	private JButton button2 = new JButton("Pluto");
+	private JButton button2 = new JButton("Sit Down");
 	
 	private final int SIZE3 = 180;
 	private Container con3 = getContentPane();
-	private JButton button3 = new JButton("Venus");
+	private JButton button3 = new JButton("Run");
 
 	JFrame frame = new JFrame();
 	JPanel panel= new JPanel();
 	JLabel label= new JLabel();
-	public QuestionSeven()
+	public QuestionEight()
 	{
-		label.setText("Which species of mollusc and a planet share a name?");
+		label.setText("Washington police officers get a half hour class in how to what?");
 		panel.add(label);
 		frame.add(panel);
 		frame.pack();
@@ -62,7 +62,10 @@ public class QuestionSeven extends JFrame{
 		button2.setForeground(Color.WHITE);
 		button2.setMnemonic(KeyEvent.VK_C);
 		button2.setActionCommand("2");
-		button2.addActionListener(c -> JOptionPane.showMessageDialog(null, "Wrong Answer"));
+		button2.addActionListener(c -> JOptionPane.showMessageDialog(null, "Correct!"));
+		button2.addActionListener(c -> QuestionNine.main(null));
+		button2.addActionListener(c -> dispose());
+		button2.addActionListener(c -> frame.dispose());
 		
 		setSize(SIZE3, SIZE3);
 		con3.setLayout(new FlowLayout());
@@ -72,14 +75,11 @@ public class QuestionSeven extends JFrame{
 		button3.setForeground(Color.WHITE);
 		button3.setMnemonic(KeyEvent.VK_D);
 		button3.setActionCommand("3");
-		button3.addActionListener(d -> JOptionPane.showMessageDialog(null, "Correct!"));
-		button3.addActionListener(d -> QuestionEight.main(null));
-		button3.addActionListener(d -> dispose());
-		button3.addActionListener(d -> frame.dispose());
+		button3.addActionListener(d -> JOptionPane.showMessageDialog(null, "Wrong Answer"));
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		QuestionSeven frame = new QuestionSeven();
+		QuestionEight frame = new QuestionEight();
 		frame.setVisible(true);
 	}
 }
