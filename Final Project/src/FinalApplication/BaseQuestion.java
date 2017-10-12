@@ -77,6 +77,8 @@ public class BaseQuestion extends JFrame{
 		button3.setMnemonic(KeyEvent.VK_D);
 		button3.setActionCommand("3");
 		button3.addActionListener(d -> JOptionPane.showMessageDialog(null, "Wrong Answer"));
+		
+		
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
