@@ -12,11 +12,10 @@ public class MoreTest {
 
 	 public static void main(String[] args) throws Exception {
 	        URL url = new URL(
-	            "https://www.myinstants.com/instant/worlds-smallest-violin/");
+	            "");
 	        Clip clip = AudioSystem.getClip();
 	        // getAudioInputStream() also accepts a File or InputStream
-	        AudioInputStream ais = AudioSystem.
-	            getAudioInputStream( url );
+	        AudioInputStream ais = AudioSystem.getAudioInputStream( url );
 	        clip.open(ais);
 	        clip.loop(Clip.LOOP_CONTINUOUSLY);
 	        SwingUtilities.invokeLater(new Runnable() {
