@@ -53,6 +53,11 @@ public class QuestionTwo extends JFrame{
 		button1.setMnemonic(KeyEvent.VK_B);
 		button1.setActionCommand("1");
 		button1.addActionListener(b -> JOptionPane.showMessageDialog(null, "Correct!"));
+
+		button1.addActionListener(b -> QuestionThree.main(null));
+		button1.addActionListener(b -> dispose());
+		button1.addActionListener(b -> frame.dispose());
+
 		button1.addActionListener(a -> QuestionThree.main(null));
 		
 		setSize(SIZE2, SIZE2);
