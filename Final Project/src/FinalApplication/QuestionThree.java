@@ -1,5 +1,6 @@
 package FinalApplication;
 
+
 import javax.swing.*;
 
 import java.awt.*;
@@ -84,3 +85,13 @@ public class QuestionThree extends JFrame{
 		frame.setVisible(true);
 	}
 }
+
+public class QuestionThree {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
