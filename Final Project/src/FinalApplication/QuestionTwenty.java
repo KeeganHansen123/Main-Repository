@@ -5,29 +5,29 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class QuestionSixteen extends JFrame{
+public class QuestionTwenty extends JFrame{
 	private final int SIZE = 180;
 	private Container con = getContentPane();
-	private JButton button = new JButton("Trigonometry");
+	private JButton button = new JButton("December");
 	
 	private final int SIZE1 = 180;
 	private Container con1 = getContentPane();
-	private JButton button1 = new JButton("Calculus");
+	private JButton button1 = new JButton("November");
 	
 	private final int SIZE2 = 180;
 	private Container con2 = getContentPane();
-	private JButton button2 = new JButton("Algebra");
+	private JButton button2 = new JButton("September");
 	
 	private final int SIZE3 = 180;
 	private Container con3 = getContentPane();
-	private JButton button3 = new JButton("Geometry");
+	private JButton button3 = new JButton("October");
 
 	JFrame frame = new JFrame();
 	JPanel panel= new JPanel();
 	JLabel label= new JLabel();
-	public QuestionSixteen()
+	public QuestionTwenty()
 	{
-		label.setText("Which branch of mathematics deals with the sides and angles of triangles, and their relationship to each other?");
+		label.setText("October Revolution is celebrated in which month in Russia?");
 		panel.add(label);
 		frame.add(panel);
 		frame.pack();
@@ -42,11 +42,7 @@ public class QuestionSixteen extends JFrame{
 		button.setForeground(Color.WHITE);
 		button.setMnemonic(KeyEvent.VK_A);
 		button.setActionCommand("0");
-		button.addActionListener(a -> JOptionPane.showMessageDialog(null, "Correct!"));
-		button.addActionListener(a -> QuestionSeventeen.main(null));
-		button.addActionListener(a -> dispose());
-		button.addActionListener(a -> frame.dispose());
-		
+		button.addActionListener(a -> JOptionPane.showMessageDialog(null, "Wrong Answer"));
 		
 		setSize(SIZE1, SIZE1);
 		con1.setLayout(new FlowLayout());
@@ -56,7 +52,10 @@ public class QuestionSixteen extends JFrame{
 		button1.setForeground(Color.WHITE);
 		button1.setMnemonic(KeyEvent.VK_B);
 		button1.setActionCommand("1");
-		button1.addActionListener(b -> JOptionPane.showMessageDialog(null, "Wrong Answer"));
+		button1.addActionListener(b -> JOptionPane.showMessageDialog(null, "Correct!"));
+		button1.addActionListener(b -> QuestionTwentyOne.main(null));
+		button1.addActionListener(b -> dispose());
+		button1.addActionListener(b -> frame.dispose());
 
 		setSize(SIZE2, SIZE2);
 		con2.setLayout(new FlowLayout());
@@ -80,7 +79,7 @@ public class QuestionSixteen extends JFrame{
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		QuestionSixteen frame = new QuestionSixteen();
+		QuestionTwenty frame = new QuestionTwenty();
 		frame.setVisible(true);
 	}
 }

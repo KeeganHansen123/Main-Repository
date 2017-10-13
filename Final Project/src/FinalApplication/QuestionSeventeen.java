@@ -5,29 +5,29 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class QuestionSixteen extends JFrame{
+public class QuestionSeventeen extends JFrame{
 	private final int SIZE = 180;
 	private Container con = getContentPane();
-	private JButton button = new JButton("Trigonometry");
+	private JButton button = new JButton("10");
 	
 	private final int SIZE1 = 180;
 	private Container con1 = getContentPane();
-	private JButton button1 = new JButton("Calculus");
+	private JButton button1 = new JButton("8");
 	
 	private final int SIZE2 = 180;
 	private Container con2 = getContentPane();
-	private JButton button2 = new JButton("Algebra");
+	private JButton button2 = new JButton("6");
 	
 	private final int SIZE3 = 180;
 	private Container con3 = getContentPane();
-	private JButton button3 = new JButton("Geometry");
+	private JButton button3 = new JButton("4");
 
 	JFrame frame = new JFrame();
 	JPanel panel= new JPanel();
 	JLabel label= new JLabel();
-	public QuestionSixteen()
+	public QuestionSeventeen()
 	{
-		label.setText("Which branch of mathematics deals with the sides and angles of triangles, and their relationship to each other?");
+		label.setText("How many pockets does a Billiard Table have?");
 		panel.add(label);
 		frame.add(panel);
 		frame.pack();
@@ -43,10 +43,6 @@ public class QuestionSixteen extends JFrame{
 		button.setMnemonic(KeyEvent.VK_A);
 		button.setActionCommand("0");
 		button.addActionListener(a -> JOptionPane.showMessageDialog(null, "Correct!"));
-		button.addActionListener(a -> QuestionSeventeen.main(null));
-		button.addActionListener(a -> dispose());
-		button.addActionListener(a -> frame.dispose());
-		
 		
 		setSize(SIZE1, SIZE1);
 		con1.setLayout(new FlowLayout());
@@ -67,6 +63,9 @@ public class QuestionSixteen extends JFrame{
 		button2.setMnemonic(KeyEvent.VK_C);
 		button2.setActionCommand("2");
 		button2.addActionListener(c -> JOptionPane.showMessageDialog(null, "Wrong Answer"));
+		button2.addActionListener(c -> QuestionEighteen.main(null));
+		button2.addActionListener(c -> dispose());
+		button2.addActionListener(c -> frame.dispose());
 
 		setSize(SIZE3, SIZE3);
 		con3.setLayout(new FlowLayout());
@@ -80,7 +79,7 @@ public class QuestionSixteen extends JFrame{
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		QuestionSixteen frame = new QuestionSixteen();
+		QuestionSeventeen frame = new QuestionSeventeen();
 		frame.setVisible(true);
 	}
 }

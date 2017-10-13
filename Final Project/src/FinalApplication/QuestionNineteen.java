@@ -5,29 +5,29 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class QuestionSixteen extends JFrame{
+public class QuestionNineteen extends JFrame{
 	private final int SIZE = 180;
 	private Container con = getContentPane();
-	private JButton button = new JButton("Trigonometry");
+	private JButton button = new JButton("12");
 	
 	private final int SIZE1 = 180;
 	private Container con1 = getContentPane();
-	private JButton button1 = new JButton("Calculus");
+	private JButton button1 = new JButton("9");
 	
 	private final int SIZE2 = 180;
 	private Container con2 = getContentPane();
-	private JButton button2 = new JButton("Algebra");
+	private JButton button2 = new JButton("6");
 	
 	private final int SIZE3 = 180;
 	private Container con3 = getContentPane();
-	private JButton button3 = new JButton("Geometry");
+	private JButton button3 = new JButton("3");
 
 	JFrame frame = new JFrame();
 	JPanel panel= new JPanel();
 	JLabel label= new JLabel();
-	public QuestionSixteen()
+	public QuestionNineteen()
 	{
-		label.setText("Which branch of mathematics deals with the sides and angles of triangles, and their relationship to each other?");
+		label.setText("How many valves does a trumpet have?");
 		panel.add(label);
 		frame.add(panel);
 		frame.pack();
@@ -42,11 +42,7 @@ public class QuestionSixteen extends JFrame{
 		button.setForeground(Color.WHITE);
 		button.setMnemonic(KeyEvent.VK_A);
 		button.setActionCommand("0");
-		button.addActionListener(a -> JOptionPane.showMessageDialog(null, "Correct!"));
-		button.addActionListener(a -> QuestionSeventeen.main(null));
-		button.addActionListener(a -> dispose());
-		button.addActionListener(a -> frame.dispose());
-		
+		button.addActionListener(a -> JOptionPane.showMessageDialog(null, "Wrong Answer"));
 		
 		setSize(SIZE1, SIZE1);
 		con1.setLayout(new FlowLayout());
@@ -76,11 +72,14 @@ public class QuestionSixteen extends JFrame{
 		button3.setForeground(Color.WHITE);
 		button3.setMnemonic(KeyEvent.VK_D);
 		button3.setActionCommand("3");
-		button3.addActionListener(d -> JOptionPane.showMessageDialog(null, "Wrong Answer"));
+		button3.addActionListener(d -> JOptionPane.showMessageDialog(null, "Correct!"));
+		button3.addActionListener(d -> QuestionTwenty.main(null));
+		button3.addActionListener(d -> dispose());
+		button3.addActionListener(d -> frame.dispose());
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		QuestionSixteen frame = new QuestionSixteen();
+		QuestionNineteen frame = new QuestionNineteen();
 		frame.setVisible(true);
 	}
 }
