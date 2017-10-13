@@ -5,40 +5,35 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class BaseQuestion extends JFrame{
-	
+public class QuestionFifteen extends JFrame{
 	private final int SIZE = 180;
 	private Container con = getContentPane();
-	private JButton button = new JButton("A Myriaannum");
+	private JButton button = new JButton("7");
 	
 	private final int SIZE1 = 180;
 	private Container con1 = getContentPane();
-	private JButton button1 = new JButton("A Decade");
+	private JButton button1 = new JButton("4");
 	
 	private final int SIZE2 = 180;
 	private Container con2 = getContentPane();
-	private JButton button2 = new JButton("A Millenium");
+	private JButton button2 = new JButton("5");
 	
 	private final int SIZE3 = 180;
 	private Container con3 = getContentPane();
-	private JButton button3 = new JButton("A Century");
+	private JButton button3 = new JButton("10");
 
 	JFrame frame = new JFrame();
 	JPanel panel= new JPanel();
 	JLabel label= new JLabel();
-	public BaseQuestion()
+	public QuestionFifteen()
 	{
-		label.setText("What is the word used to describe an indefinitely large number?");
+		label.setText("How many lines should a limerick have?");
 		panel.add(label);
 		frame.add(panel);
 		frame.pack();
 		frame.setLocationRelativeTo(null);
 		frame.setVisible(true);
 		
-
-		
-
-
 		setSize(SIZE, SIZE);
 		con.setLayout(new FlowLayout());
 		con.add(button);
@@ -47,13 +42,7 @@ public class BaseQuestion extends JFrame{
 		button.setForeground(Color.WHITE);
 		button.setMnemonic(KeyEvent.VK_A);
 		button.setActionCommand("0");
-		button.addActionListener(a -> JOptionPane.showMessageDialog(null, "Correct!"));
-		button.addActionListener(a -> QuestionTwo.main(null));
-		button.addActionListener(a -> dispose());
-
-		button.addActionListener(a -> frame.dispose());
-
-
+		button.addActionListener(a -> JOptionPane.showMessageDialog(null, "Wrong Answer"));
 		
 		setSize(SIZE1, SIZE1);
 		con1.setLayout(new FlowLayout());
@@ -64,7 +53,7 @@ public class BaseQuestion extends JFrame{
 		button1.setMnemonic(KeyEvent.VK_B);
 		button1.setActionCommand("1");
 		button1.addActionListener(b -> JOptionPane.showMessageDialog(null, "Wrong Answer"));
-		
+
 		setSize(SIZE2, SIZE2);
 		con2.setLayout(new FlowLayout());
 		con2.add(button2);
@@ -73,7 +62,10 @@ public class BaseQuestion extends JFrame{
 		button2.setForeground(Color.WHITE);
 		button2.setMnemonic(KeyEvent.VK_C);
 		button2.setActionCommand("2");
-		button2.addActionListener(c -> JOptionPane.showMessageDialog(null, "Wrong Answer"));
+		button2.addActionListener(c -> JOptionPane.showMessageDialog(null, "Correct!"));
+		button2.addActionListener(c -> QuestionSixteen.main(null));
+		button2.addActionListener(c -> dispose());
+		button2.addActionListener(c -> frame.dispose());
 		
 		setSize(SIZE3, SIZE3);
 		con3.setLayout(new FlowLayout());
@@ -84,17 +76,11 @@ public class BaseQuestion extends JFrame{
 		button3.setMnemonic(KeyEvent.VK_D);
 		button3.setActionCommand("3");
 		button3.addActionListener(d -> JOptionPane.showMessageDialog(null, "Wrong Answer"));
-
-		
-
-
+	
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		BaseQuestion frame = new BaseQuestion();
+		QuestionFifteen frame = new QuestionFifteen();
 		frame.setVisible(true);
-		
 	}
-	
-	
 }
