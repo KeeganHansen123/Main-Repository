@@ -5,29 +5,29 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class QuestionEleven extends JFrame{
+public class QuestionThirteen extends JFrame{
 	private final int SIZE = 180;
 	private Container con = getContentPane();
-	private JButton button = new JButton("Books");
+	private JButton button = new JButton("5");
 	
 	private final int SIZE1 = 180;
 	private Container con1 = getContentPane();
-	private JButton button1 = new JButton("Video Games");
+	private JButton button1 = new JButton("4");
 	
 	private final int SIZE2 = 180;
 	private Container con2 = getContentPane();
-	private JButton button2 = new JButton("Movies");
+	private JButton button2 = new JButton("7");
 	
 	private final int SIZE3 = 180;
 	private Container con3 = getContentPane();
-	private JButton button3 = new JButton("Money");
+	private JButton button3 = new JButton("3");
 
 	JFrame frame = new JFrame();
 	JPanel panel= new JPanel();
 	JLabel label= new JLabel();
-	public QuestionEleven()
+	public QuestionThirteen()
 	{
-		label.setText("The Dewey Decimal system is used to categorise what?");
+		label.setText("How many strings does a cello have?");
 		panel.add(label);
 		frame.add(panel);
 		frame.pack();
@@ -42,10 +42,7 @@ public class QuestionEleven extends JFrame{
 		button.setForeground(Color.WHITE);
 		button.setMnemonic(KeyEvent.VK_A);
 		button.setActionCommand("0");
-		button.addActionListener(a -> JOptionPane.showMessageDialog(null, "Correct!"));
-		button.addActionListener(a -> QuestionTwelve.main(null));
-		button.addActionListener(a -> dispose());
-		button.addActionListener(a -> frame.dispose());
+		button.addActionListener(a -> JOptionPane.showMessageDialog(null, "Wrong Answer"));
 		
 		setSize(SIZE1, SIZE1);
 		con1.setLayout(new FlowLayout());
@@ -55,7 +52,10 @@ public class QuestionEleven extends JFrame{
 		button1.setForeground(Color.WHITE);
 		button1.setMnemonic(KeyEvent.VK_B);
 		button1.setActionCommand("1");
-		button1.addActionListener(b -> JOptionPane.showMessageDialog(null, "Wrong Answer"));
+		button1.addActionListener(b -> JOptionPane.showMessageDialog(null, "Correct!"));
+		button1.addActionListener(b -> QuestionFourteen.main(null));
+		button1.addActionListener(b -> dispose());
+		button1.addActionListener(b -> frame.dispose());
 
 		setSize(SIZE2, SIZE2);
 		con2.setLayout(new FlowLayout());
@@ -79,7 +79,7 @@ public class QuestionEleven extends JFrame{
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		QuestionEleven frame = new QuestionEleven();
+		QuestionThirteen frame = new QuestionThirteen();
 		frame.setVisible(true);
 	}
 }
