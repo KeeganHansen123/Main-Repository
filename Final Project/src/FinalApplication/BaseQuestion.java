@@ -35,7 +35,10 @@ public class BaseQuestion extends JFrame{
 		frame.setLocationRelativeTo(null);
 		frame.setVisible(true);
 		
+
 		
+
+
 		setSize(SIZE, SIZE);
 		con.setLayout(new FlowLayout());
 		con.add(button);
@@ -47,7 +50,10 @@ public class BaseQuestion extends JFrame{
 		button.addActionListener(a -> JOptionPane.showMessageDialog(null, "Correct!"));
 		button.addActionListener(a -> QuestionTwo.main(null));
 		button.addActionListener(a -> dispose());
+
 		button.addActionListener(a -> frame.dispose());
+
+
 		
 		setSize(SIZE1, SIZE1);
 		con1.setLayout(new FlowLayout());
@@ -78,7 +84,10 @@ public class BaseQuestion extends JFrame{
 		button3.setMnemonic(KeyEvent.VK_D);
 		button3.setActionCommand("3");
 		button3.addActionListener(d -> JOptionPane.showMessageDialog(null, "Wrong Answer"));
+
 		
+
+
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
