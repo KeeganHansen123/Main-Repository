@@ -7,6 +7,7 @@ import java.awt.event.*;
 
 public class BaseQuestion extends JFrame{
 	
+	//Creates the answer for the questions (This code is for all of the questions)
 	private final int SIZE = 180;
 	private Container con = getContentPane();
 	private JButton button = new JButton("A Myriaannum");
@@ -28,6 +29,8 @@ public class BaseQuestion extends JFrame{
 	JLabel label= new JLabel();
 	public BaseQuestion()
 	{
+		
+		//Creates the question
 		label.setText("What is the word used to describe an indefinitely large number?");
 		panel.add(label);
 		frame.add(panel);
@@ -54,7 +57,7 @@ public class BaseQuestion extends JFrame{
 		button.addActionListener(a -> frame.dispose());
 
 
-		
+		//Tells if its right or wrong (Same code for others)
 		setSize(SIZE1, SIZE1);
 		con1.setLayout(new FlowLayout());
 		con1.add(button1);
