@@ -1,34 +1,33 @@
 package FinalApplication;
 
-
 import javax.swing.*;
 
 import java.awt.*;
 import java.awt.event.*;
 
-public class QuestionThree extends JFrame{
+public class QuestionTwentyOne extends JFrame{
 	private final int SIZE = 180;
 	private Container con = getContentPane();
-	private JButton button = new JButton("A Rock");
+	private JButton button = new JButton("5:5");
 	
 	private final int SIZE1 = 180;
 	private Container con1 = getContentPane();
-	private JButton button1 = new JButton("A Large Bottle Lid");
+	private JButton button1 = new JButton("11:11");
 	
 	private final int SIZE2 = 180;
 	private Container con2 = getContentPane();
-	private JButton button2 = new JButton("A Pinecone");
+	private JButton button2 = new JButton("12:12");
 	
 	private final int SIZE3 = 180;
 	private Container con3 = getContentPane();
-	private JButton button3 = new JButton("Frozen Cow Manure");
+	private JButton button3 = new JButton("10:10");
 
 	JFrame frame = new JFrame();
 	JPanel panel= new JPanel();
 	JLabel label= new JLabel();
-	public QuestionThree()
+	public QuestionTwentyOne()
 	{
-		label.setText("The first puck used in the game of ice hockey was?");
+		label.setText("In most advertisements, the time shown on a watch is _________");
 		panel.add(label);
 		frame.add(panel);
 		frame.pack();
@@ -54,8 +53,7 @@ public class QuestionThree extends JFrame{
 		button1.setMnemonic(KeyEvent.VK_B);
 		button1.setActionCommand("1");
 		button1.addActionListener(b -> JOptionPane.showMessageDialog(null, "Wrong Answer"));
-	
-		
+
 		setSize(SIZE2, SIZE2);
 		con2.setLayout(new FlowLayout());
 		con2.add(button2);
@@ -65,7 +63,7 @@ public class QuestionThree extends JFrame{
 		button2.setMnemonic(KeyEvent.VK_C);
 		button2.setActionCommand("2");
 		button2.addActionListener(c -> JOptionPane.showMessageDialog(null, "Wrong Answer"));
-		
+
 		setSize(SIZE3, SIZE3);
 		con3.setLayout(new FlowLayout());
 		con3.add(button3);
@@ -75,14 +73,13 @@ public class QuestionThree extends JFrame{
 		button3.setMnemonic(KeyEvent.VK_D);
 		button3.setActionCommand("3");
 		button3.addActionListener(d -> JOptionPane.showMessageDialog(null, "Correct!"));
-		button3.addActionListener(d -> QuestionFour.main(null));
+		button3.addActionListener(d -> QuestionTwentyTwo.main(null));
 		button3.addActionListener(d -> dispose());
 		button3.addActionListener(d -> frame.dispose());
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		QuestionThree frame = new QuestionThree();
+		QuestionTwentyOne frame = new QuestionTwentyOne();
 		frame.setVisible(true);
 	}
 }
-
