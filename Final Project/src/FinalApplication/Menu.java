@@ -11,17 +11,9 @@ public class Menu extends JFrame {
 		private Container con1 = getContentPane();
 		private JButton button1 = new JButton("22 Questions");
 	
-
 		private final int SIZE = 180;
 		private Container con = getContentPane();
 		private JButton button = new JButton("Play");
-
-	
-		private final int SIZE = 180;
-		private Container con = getContentPane();
-		private JButton button = new JButton("Play");
-		
-
 		
 		private final int SIZE2 = 180;
 		private Container con2 = getContentPane();
@@ -47,6 +39,7 @@ public class Menu extends JFrame {
 			button.setMnemonic(KeyEvent.VK_M);
 			button.setActionCommand("go");
 			button.addActionListener(m -> Game.gameStart());
+			button.addActionListener(m -> dispose());
 			
 			setSize(SIZE2, SIZE2);
 			con2.setLayout(new FlowLayout());

@@ -8,26 +8,26 @@ import java.awt.event.*;
 public class QuestionTwentyOne extends JFrame{
 	private final int SIZE = 180;
 	private Container con = getContentPane();
-	private JButton button = new JButton("December");
+	private JButton button = new JButton("5:5");
 	
 	private final int SIZE1 = 180;
 	private Container con1 = getContentPane();
-	private JButton button1 = new JButton("November");
+	private JButton button1 = new JButton("11:11");
 	
 	private final int SIZE2 = 180;
 	private Container con2 = getContentPane();
-	private JButton button2 = new JButton("September");
+	private JButton button2 = new JButton("12:12");
 	
 	private final int SIZE3 = 180;
 	private Container con3 = getContentPane();
-	private JButton button3 = new JButton("October");
+	private JButton button3 = new JButton("10:10");
 
 	JFrame frame = new JFrame();
 	JPanel panel= new JPanel();
 	JLabel label= new JLabel();
 	public QuestionTwentyOne()
 	{
-		label.setText("October Revolution is celebrated in which month in Russia?");
+		label.setText("In most advertisements, the time shown on a watch is _________");
 		panel.add(label);
 		frame.add(panel);
 		frame.pack();
@@ -52,10 +52,7 @@ public class QuestionTwentyOne extends JFrame{
 		button1.setForeground(Color.WHITE);
 		button1.setMnemonic(KeyEvent.VK_B);
 		button1.setActionCommand("1");
-		button1.addActionListener(b -> JOptionPane.showMessageDialog(null, "Correct!"));
-		button1.addActionListener(b -> QuestionTwentyTwo.main(null));
-		button1.addActionListener(b -> dispose());
-		button1.addActionListener(b -> frame.dispose());
+		button1.addActionListener(b -> JOptionPane.showMessageDialog(null, "Wrong Answer"));
 
 		setSize(SIZE2, SIZE2);
 		con2.setLayout(new FlowLayout());
@@ -75,7 +72,10 @@ public class QuestionTwentyOne extends JFrame{
 		button3.setForeground(Color.WHITE);
 		button3.setMnemonic(KeyEvent.VK_D);
 		button3.setActionCommand("3");
-		button3.addActionListener(d -> JOptionPane.showMessageDialog(null, "Wrong Answer"));
+		button3.addActionListener(d -> JOptionPane.showMessageDialog(null, "Correct!"));
+		button3.addActionListener(d -> QuestionTwentyTwo.main(null));
+		button3.addActionListener(d -> dispose());
+		button3.addActionListener(d -> frame.dispose());
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
