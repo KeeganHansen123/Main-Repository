@@ -14,8 +14,9 @@ public class Score {
 	
 	public static void f(String[] args) throws FileNotFoundException {
 		// TODO Auto-generated method stub
-		int score = 0;
-		score++;
+
+		for(int score =0 ; score != 22 ; score++ )
+		{
 		try(PrintWriter out = new PrintWriter("New.txt")) {
 		out.print(score); 
 		}
@@ -24,5 +25,5 @@ public class Score {
 		
 		JOptionPane.showMessageDialog(null, "Your score is " + score);
 	}
-
+	}
 }

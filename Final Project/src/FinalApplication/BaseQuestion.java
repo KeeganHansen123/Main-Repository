@@ -4,6 +4,7 @@ import javax.swing.*;
 
 import java.awt.*;
 import java.awt.event.*;
+import java.io.FileNotFoundException;
 
 public class BaseQuestion extends JFrame{
 	
@@ -52,7 +53,14 @@ public class BaseQuestion extends JFrame{
 		button.setActionCommand("0");
 		button.addActionListener(a -> JOptionPane.showMessageDialog(null, "Correct!"));
 		button.addActionListener(a -> QuestionTwo.main(null));
-		button.addActionListener(a -> Score.main(null));
+		button.addActionListener(a -> {
+			try {
+				Score.main();
+			} catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		});
 		button.addActionListener(a -> dispose());
 		button.addActionListener(a -> frame.dispose());
 		
