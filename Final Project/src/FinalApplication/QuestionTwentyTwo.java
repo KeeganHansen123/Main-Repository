@@ -34,6 +34,7 @@ public class QuestionTwentyTwo extends JFrame{
 		frame.setLocationRelativeTo(null);
 		frame.setVisible(true);
 		
+		//This button is different from every other button because it restarts the game by opening the game menu.
 		setSize(SIZE, SIZE);
 		con.setLayout(new FlowLayout());
 		con.add(button);
