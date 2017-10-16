@@ -29,7 +29,7 @@ public class BaseQuestion extends JFrame{
 	JLabel label= new JLabel();
 	public BaseQuestion()
 	{
-		
+		int tries = 3;
 		//Creates the question
 		label.setText("What is the word used to describe an indefinitely large number?");
 		panel.add(label);
@@ -41,7 +41,7 @@ public class BaseQuestion extends JFrame{
 
 		
 
-
+		
 		setSize(SIZE, SIZE);
 		con.setLayout(new FlowLayout());
 		con.add(button);
@@ -52,11 +52,10 @@ public class BaseQuestion extends JFrame{
 		button.setActionCommand("0");
 		button.addActionListener(a -> JOptionPane.showMessageDialog(null, "Correct!"));
 		button.addActionListener(a -> QuestionTwo.main(null));
+		button.addActionListener(a -> Score.main(null));
 		button.addActionListener(a -> dispose());
-
 		button.addActionListener(a -> frame.dispose());
-
-
+		
 		//Tells if its right or wrong (Same code for others)
 		setSize(SIZE1, SIZE1);
 		con1.setLayout(new FlowLayout());
@@ -87,7 +86,7 @@ public class BaseQuestion extends JFrame{
 		button3.setMnemonic(KeyEvent.VK_D);
 		button3.setActionCommand("3");
 		button3.addActionListener(d -> JOptionPane.showMessageDialog(null, "Wrong Answer"));
-
+			
 		
 
 

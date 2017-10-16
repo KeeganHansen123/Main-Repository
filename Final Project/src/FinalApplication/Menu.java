@@ -54,7 +54,6 @@ public class Menu extends JFrame {
 			button3.setMnemonic(KeyEvent.VK_E);
 			button3.setActionCommand("stop");
 			button3.addActionListener(e -> System.exit(0));
-			
 		}
 		public static void main(String[] args)
 		{

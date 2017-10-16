@@ -4,6 +4,7 @@ import javax.swing.*;
 
 import java.awt.*;
 import java.awt.event.*;
+import java.io.FileNotFoundException;
 
 public class QuestionTwo extends JFrame{
 	private final int SIZE = 180;
@@ -55,10 +56,17 @@ public class QuestionTwo extends JFrame{
 		button1.addActionListener(b -> JOptionPane.showMessageDialog(null, "Correct!"));
 
 		button1.addActionListener(b -> QuestionThree.main(null));
+		button2.addActionListener(b -> {
+			try {
+				Score.main();
+			} catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		});
 		button1.addActionListener(b -> dispose());
 		button1.addActionListener(b -> frame.dispose());
 
-		button1.addActionListener(a -> QuestionThree.main(null));
 		
 		setSize(SIZE2, SIZE2);
 		con2.setLayout(new FlowLayout());
