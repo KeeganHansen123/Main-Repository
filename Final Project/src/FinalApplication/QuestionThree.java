@@ -84,14 +84,6 @@ public class QuestionThree extends JFrame{
 		QuestionThree frame = new QuestionThree();
 		frame.setVisible(true);
 	}
-}
-
-public class QuestionThree {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
 
 }
 
