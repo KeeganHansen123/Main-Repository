@@ -9,9 +9,5 @@ public class Scores {
 	
 		name = JOptionPane.showInputDialog(null, "Please enter your name");
 		
-		System.out.println(name);
-	
-		
-		
 	}
 }
