@@ -2,6 +2,8 @@ package FinalApplication;
 
 import javax.swing.*;
 
+import index.Score;
+
 import java.awt.*;
 import java.awt.event.*;
 import java.io.FileNotFoundException;

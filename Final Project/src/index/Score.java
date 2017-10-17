@@ -1,4 +1,4 @@
-package FinalApplication;
+package index;
 
 
 import java.io.FileNotFoundException;
@@ -14,8 +14,8 @@ public class Score {
 	
 	public static void f(String[] args) throws FileNotFoundException {
 		// TODO Auto-generated method stub
-
-		for(int score =0 ; score != 22 ; score++ )
+		int score = 0;
+		while(score != 22)
 		{
 		try(PrintWriter out = new PrintWriter("New.txt")) {
 		out.print(score); 
