@@ -20,6 +20,10 @@ public class Menu extends JFrame {
 		private Container con2 = getContentPane();
 		private JButton button2 = new JButton("Quit");
 		
+		private final int SIZE3 = 180;
+		private Container con3 = getContentPane();
+		private JButton button3 = new JButton("HighScores");
+		
 		public Menu()
 		{
 			//This is the section of code that changes what the buttons look like, you can change their color by typing in different values.
@@ -41,7 +45,7 @@ public class Menu extends JFrame {
 			button.setForeground(Color.WHITE);
 			button.setMnemonic(KeyEvent.VK_M);
 			button.setActionCommand("go");
-			button.addActionListener(m -> Game.gameStart());
+			button.addActionListener(m -> Scores.main(null));
 			button.addActionListener(m -> dispose());
 			
 			//The System.exit(0) command tells the program that if this button is pressed, it needs to terminate itself.
@@ -55,6 +59,15 @@ public class Menu extends JFrame {
 			button2.setActionCommand("stop");
 			button2.addActionListener(e -> System.exit(0));
 			
+			setSize(SIZE3, SIZE3);
+			con3.setLayout(new FlowLayout());
+			con3.add(button3);
+			con3.setBackground(Color.BLACK);
+			button3.setBackground(Color.BLUE);
+			button3.setForeground(Color.WHITE);
+			button3.setMnemonic(KeyEvent.VK_D);
+			button3.setActionCommand("stop");
+			
 		}
 		public static void main(String[] args)
 		{
@@ -63,8 +76,8 @@ public class Menu extends JFrame {
 			frame.setVisible(true);
 		
 		}
-			
-		
+
+
 }
 
 			
