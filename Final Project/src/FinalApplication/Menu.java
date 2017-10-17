@@ -59,6 +59,7 @@ public class Menu extends JFrame {
 			button2.setActionCommand("stop");
 			button2.addActionListener(e -> System.exit(0));
 			
+			//High Score button, click to see top 5 scores.
 			setSize(SIZE3, SIZE3);
 			con3.setLayout(new FlowLayout());
 			con3.add(button3);
