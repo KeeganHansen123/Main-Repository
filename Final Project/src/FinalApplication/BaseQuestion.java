@@ -2,15 +2,13 @@ package FinalApplication;
 
 import javax.swing.*;
 
-import index.Score;
 
 import java.awt.*;
 import java.awt.event.*;
 import java.io.FileNotFoundException;
 
 public class BaseQuestion extends JFrame{
-	
-	//Creates the answer for the questions (This code is for all of the questions)
+
 	private final int SIZE = 180;
 	private Container con = getContentPane();
 	private JButton button = new JButton("A Myriaannum");
@@ -27,24 +25,20 @@ public class BaseQuestion extends JFrame{
 	private Container con3 = getContentPane();
 	private JButton button3 = new JButton("A Century");
 
+	//These lines create the components needed to put the question together.
 	JFrame frame = new JFrame();
 	JPanel panel= new JPanel();
 	JLabel label= new JLabel();
 	public BaseQuestion()
 	{
-		int tries = 3;
-		//Creates the question
+
 		label.setText("What is the word used to describe an indefinitely large number?");
 		panel.add(label);
 		frame.add(panel);
 		frame.pack();
 		frame.setLocationRelativeTo(null);
 		frame.setVisible(true);
-		
 
-		
-
-		
 		setSize(SIZE, SIZE);
 		con.setLayout(new FlowLayout());
 		con.add(button);
@@ -65,8 +59,7 @@ public class BaseQuestion extends JFrame{
 		});
 		button.addActionListener(a -> dispose());
 		button.addActionListener(a -> frame.dispose());
-		
-		//Tells if its right or wrong (Same code for others)
+
 		setSize(SIZE1, SIZE1);
 		con1.setLayout(new FlowLayout());
 		con1.add(button1);
@@ -75,7 +68,16 @@ public class BaseQuestion extends JFrame{
 		button1.setForeground(Color.WHITE);
 		button1.setMnemonic(KeyEvent.VK_B);
 		button1.setActionCommand("1");
-		button1.addActionListener(b -> JOptionPane.showMessageDialog(null, "Wrong Answer"));
+		button1.addActionListener(b -> {
+			try {
+				Score.main(null);
+			} catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		});
+		button1.addActionListener(b -> dispose());
+		button1.addActionListener(b -> frame.dispose());
 		
 		setSize(SIZE2, SIZE2);
 		con2.setLayout(new FlowLayout());
