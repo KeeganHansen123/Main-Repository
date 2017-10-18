@@ -64,7 +64,14 @@ public class BaseQuestion extends JFrame{
 		button1.setForeground(Color.WHITE);
 		button1.setMnemonic(KeyEvent.VK_B);
 		button1.setActionCommand("1");
-		button1.addActionListener(b -> Score.main(null));
+		button1.addActionListener(b -> {
+			try {
+				Score.main(null);
+			} catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		});
 		button1.addActionListener(b -> dispose());
 		button1.addActionListener(b -> frame.dispose());
 		
