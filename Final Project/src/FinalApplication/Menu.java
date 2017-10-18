@@ -7,7 +7,10 @@ import java.awt.event.*;
 
 public class Menu extends JFrame {
 	
-
+		private final int SIZE1 = 180;
+		private Container con1 = getContentPane();
+		private JButton button1 = new JButton("22 Questions");
+	
 		private final int SIZE2 = 180;
 		private Container con2 = getContentPane();
 		private JButton button2 = new JButton("Play");
@@ -17,9 +20,9 @@ public class Menu extends JFrame {
 		private Container con3 = getContentPane();
 		private JButton button3 = new JButton("Quit");
 		
-		private final int SIZE3 = 180;
-		private Container con3 = getContentPane();
-		private JButton button3 = new JButton("HighScores");
+		private final int SIZE4 = 180;
+		private Container con4 = getContentPane();
+		private JButton button4 = new JButton("HighScores");
 		
 		public Menu()
 		{
@@ -46,6 +49,13 @@ public class Menu extends JFrame {
 			con3.setBackground(Color.BLACK);
 			button3.setBackground(Color.BLUE);
 			button3.setForeground(Color.WHITE);
+			
+			setSize(SIZE4, SIZE4);
+			con4.setLayout(new FlowLayout());
+			con4.add(button4);
+			con4.setBackground(Color.BLACK);
+			button4.setBackground(Color.BLUE);
+			button4.setForeground(Color.WHITE);
 
 		}
 		public static void main(String[] args)

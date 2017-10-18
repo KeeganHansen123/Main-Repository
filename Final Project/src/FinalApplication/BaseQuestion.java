@@ -2,6 +2,7 @@ package FinalApplication;
 
 import javax.swing.*;
 
+import BradensHighScoreTesting.Score;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -51,7 +52,7 @@ public class BaseQuestion extends JFrame{
 		button.addActionListener(a -> QuestionTwo.main(null));
 		button.addActionListener(a -> {
 			try {
-				Score.main();
+				Score.main(null);
 			} catch (FileNotFoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
