@@ -6,19 +6,26 @@ import FinalApplication.BaseQuestion;
 
 public class Score {
 		
-		
-		
 	public static void main(String[] args) {
 		
-		for (int Score = 500; Score <= 500; Score -= 10)
-		{
-			JOptionPane.showMessageDialog(null, Score);
-			BaseQuestion.main(null);
-			
-		}
-		
+		// TODO Auto-generated method stub
+				 int attemptsNum = 0;
+				    final int maxAttempts = 1;
+				    int user;
+					int comp;
+					int score = 500;
+					do {
+					score -= 10;
+					
+					JOptionPane.showMessageDialog(null, "-10");
+				    JOptionPane.showMessageDialog(null, "Your Score is "+ score);
+				    } while (++attemptsNum <maxAttempts );
+
+				    if (attemptsNum == maxAttempts);
+				    
+				    BaseQuestion.main(null);
+					
 	}
-	
 }
 
 		
